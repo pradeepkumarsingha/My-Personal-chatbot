@@ -1,0 +1,7 @@
+I am Pradeep Kumar Singha, a B.Tech student in Computer Science and Engineering with a specialization in Artificial Intelligence at GIFT Autonomous, Bhubaneswar.
+
+I am passionate about Artificial Intelligence, Machine Learning, Data Science, and Generative AI. I enjoy building intelligent systems that solve real-world problems using data-driven approaches. My experience includes developing machine learning models, performing exploratory data analysis, building AI-powered applications, and working with technologies such as Python, TensorFlow, scikit-learn, Pandas, and FastAPI.
+
+I have worked on projects such as an AI Carrier twin, Krushi Sathi– an AI-powered farming assistant, and a Crop Disease Detection system. Through internships and hands-on projects, I have gained practical experience in model development, data analysis, and deploying AI solutions.
+
+I am continuously learning new technologies in AI and Data Science and aspire to build innovative products that create meaningful impact in industries such as education, agriculture, and healthcare.

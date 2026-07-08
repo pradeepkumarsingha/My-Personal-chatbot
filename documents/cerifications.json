@@ -1,0 +1,102 @@
+[
+{
+"title": "AI & Machine Learning",
+"issuer": "Central Tool Room & Training Centre (CTTC)",
+"year": "2025",
+"description": "Completed training in Artificial Intelligence and Machine Learning, covering data preprocessing, exploratory data analysis, machine learning algorithms, model evaluation, and practical AI applications.",
+"skills": [
+"Python",
+"Machine Learning",
+"Data Analysis",
+"Scikit-learn",
+"Model Evaluation",
+"EDA"
+]
+},
+{
+"title": "Java Programming",
+"issuer": "Odisha Computer Application Centre (OCAC)",
+"year": "2025",
+"description": "Completed training in Java programming with a focus on object-oriented programming concepts, data structures, debugging, and software development practices.",
+"skills": [
+"Java",
+"OOP",
+"Collections",
+"Exception Handling",
+"Software Development"
+]
+},
+{
+"title": "Design and Analysis of Algorithms",
+"issuer": "3 Skill",
+"year": "2024",
+"description": "Studied algorithm design techniques, complexity analysis, recursion, dynamic programming, greedy algorithms, and graph algorithms.",
+"skills": [
+"Algorithms",
+"Data Structures",
+"Dynamic Programming",
+"Greedy Algorithms",
+"Complexity Analysis"
+]
+},
+{
+"title": "Cybersecurity",
+"issuer": "The Technique Academy",
+"year": "2024",
+"description": "Learned the fundamentals of cybersecurity, network security, cyber threats, vulnerabilities, and security best practices.",
+"skills": [
+"Cybersecurity",
+"Network Security",
+"Information Security",
+"Security Best Practices"
+]
+},
+{
+"title": "Oracle Database 12c",
+"issuer": "Oracle University",
+"year": "2023",
+"description": "Completed training in Oracle Database concepts including SQL queries, database design, normalization, and database management.",
+"skills": [
+"SQL",
+"Oracle Database",
+"Database Design",
+"Normalization"
+]
+},
+{
+"title": "AI Researcher",
+"issuer": "OVERLOAD WARE LABS AI RESEARCH PROGRAM",
+"year": "2025",
+"description": "Participated in an AI research program focused on machine learning, research methodologies, experimentation, and practical AI applications.",
+"skills": [
+"Artificial Intelligence",
+"Machine Learning",
+"Research",
+"Data Analysis"
+]
+},
+{
+"title": "Generative AI",
+"issuer": "Google via Coursera",
+"year": "2024",
+"description": "Completed a Generative AI course covering large language models, prompt engineering, AI applications, and responsible AI practices.",
+"skills": [
+"Generative AI",
+"Large Language Models",
+"Prompt Engineering",
+"AI Applications"
+]
+},
+{
+"title": "Best Intern of the Month",
+"issuer": "3SKILL",
+"year": "2025",
+"description": "Received recognition as Best Intern of the Month for outstanding performance, dedication, and contributions during the internship program.",
+"skills": [
+"Leadership",
+"Problem Solving",
+"Teamwork",
+"Professional Excellence"
+]
+}
+]

@@ -1,0 +1,61 @@
+[
+{
+"role": "AI Industry-Oriented Course Trainee",
+"company": "Nirmaan, Redington & Microsoft",
+"duration": "Feb 2026 – Present",
+"description": "Participating in an industry-oriented training program focused on Artificial Intelligence, Machine Learning, Data Analytics, and Generative AI technologies. Gaining hands-on experience in data analysis, model development, prompt engineering, and real-world AI applications through practical projects and mentorship from industry experts.",
+"skills": [
+"Artificial Intelligence",
+"Machine Learning",
+"Generative AI",
+"Data Analytics",
+"Prompt Engineering",
+"Python"
+]
+},
+{
+"role": "AI/ML Research Intern",
+"company": "Owl AI",
+"duration": "September 2025",
+"description": "Conducted research and experimentation with machine learning models to extract data-driven insights. Performed exploratory data analysis using Pandas, NumPy, and Matplotlib, and optimized models through hyperparameter tuning to improve prediction accuracy.",
+"skills": [
+"Machine Learning",
+"Python",
+"Pandas",
+"NumPy",
+"Matplotlib",
+"EDA",
+"Hyperparameter Tuning",
+"Data Analysis"
+]
+},
+{
+"role": "AI/ML Intern",
+"company": "Central Tool Room & Training Centre (CTTC)",
+"duration": "June 2025",
+"description": "Worked on data preprocessing and exploratory data analysis. Built and evaluated classification models using Scikit-learn with feature scaling, cross-validation, and performance evaluation metrics such as accuracy, precision, recall, and confusion matrix.",
+"skills": [
+"Python",
+"Scikit-learn",
+"Data Preprocessing",
+"EDA",
+"Classification",
+"Feature Scaling",
+"Cross Validation",
+"Model Evaluation"
+]
+},
+{
+"role": "Java Intern",
+"company": "Odisha Computer Application Centre (OCAC)",
+"duration": "September 2024",
+"description": "Developed Java-based applications using object-oriented programming principles. Worked on backend logic, debugging, and writing efficient, modular code while gaining exposure to real-world software development practices.",
+"skills": [
+"Java",
+"OOP",
+"Backend Development",
+"Debugging",
+"Software Development"
+]
+}
+]

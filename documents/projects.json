@@ -1,0 +1,132 @@
+[
+{
+"title": "Krushi Sathi",
+"description": "An AI-powered precision agriculture ecosystem that converts soil data, real-time weather metrics, and leaf imagery into actionable farming insights, maximizing yield and diagnosing crop diseases.",
+"technologies": [
+"Flask",
+"Python",
+"React",
+"Tailwind CSS",
+"TensorFlow Lite",
+"Scikit-Learn",
+"Pandas",
+"Joblib",
+"Generative AI"
+],
+"highlights": [
+"Developed predictive machine learning models for crop recommendation and yield estimation.",
+"Integrated OpenWeather API for weather-adaptive irrigation and climate alerts.",
+"Implemented a TensorFlow Lite-based computer vision pipeline for crop disease diagnosis.",
+"Optimized backend architecture with lazy-loaded models to reduce startup time.",
+"Built a responsive dashboard for monitoring soil health and weather conditions."
+],
+"github": "https://github.com/pradeepkumarsingha/Krushi-Sathi",
+"live": "https://krushi-sathi.vercel.app/"
+},
+{
+"title": "AI Career Twin",
+"description": "An AI-powered career development platform that creates a personalized digital twin to analyze skills, resumes, interests, and career goals while providing career recommendations and interview preparation.",
+"technologies": [
+"Python",
+"FastAPI",
+"React",
+"Node.js",
+"MongoDB",
+"LLM",
+"Generative AI",
+"Machine Learning",
+"NLP",
+"Data Analytics"
+],
+"highlights": [
+"Developed a personalized digital twin for career analysis and guidance.",
+"Implemented AI-powered role prediction and career recommendations.",
+"Built skill gap analysis with customized learning roadmaps.",
+"Integrated ATS resume scoring and resume improvement suggestions.",
+"Developed an AI mock interview system with real-time feedback.",
+"Implemented live interview practice with AI-driven evaluation."
+],
+"github": "https://github.com/pradeepkumarsingha/Ai-Interview-Practice-Platform",
+"live": "https://ai-carrier-twin.vercel.app/"
+},
+{
+"title": "Estate AI",
+"description": "A GenAI-powered real estate platform that provides intelligent property recommendations, price predictions, and investment guidance based on market trends.",
+"technologies": [
+"React",
+"Node.js",
+"MongoDB",
+"Python",
+"Machine Learning",
+"Data Science",
+"Data Analytics"
+],
+"highlights": [
+"Built using real estate data from Bhubaneswar.",
+"Implemented ML-based property recommendations.",
+"Developed AI-powered price prediction and market analysis.",
+"Built a business advisor for investment decisions.",
+"Implemented location-based intelligent filtering."
+],
+"github": "https://github.com/pradeepkumarsingha/Ai-Powered-Price-Estimator-and-Business-Advisor",
+"live": "https://ai-powered-price-estimator-and-busi.vercel.app/"
+},
+{
+"title": "DeliverX",
+"description": "A scalable full-stack food delivery platform with real-time order tracking and role-based dashboards.",
+"technologies": [
+"MongoDB",
+"Express",
+"React",
+"Node.js",
+"Socket.IO",
+"JWT Authentication"
+],
+"highlights": [
+"Implemented real-time order tracking using WebSockets.",
+"Built OTP-based secure delivery verification.",
+"Developed dashboards for users, sellers, and delivery agents.",
+"Designed scalable REST APIs."
+],
+"github": "https://github.com/pradeepkumarsingha/DeliverX"
+},
+{
+"title": "Crop Disease Detection",
+"description": "An AI-powered crop disease detection system that uses deep learning and computer vision to identify plant diseases from leaf images.",
+"technologies": [
+"Python",
+"TensorFlow",
+"CNN",
+"OpenCV",
+"NumPy",
+"React"
+],
+"highlights": [
+"Implemented image classification using Convolutional Neural Networks.",
+"Detects multiple crop diseases from leaf images.",
+"Trained on agricultural image datasets.",
+"Provides real-time predictions through a web interface."
+],
+"github": "https://github.com/pradeepkumarsingha/Crop_Disease_Detection"
+},
+{
+"title": "PKS Portfolio",
+"description": "A personal portfolio website showcasing projects, skills, and achievements.",
+"technologies": [
+"React",
+"Tailwind CSS",
+"Framer Motion",
+"JavaScript",
+"HTML",
+"CSS"
+],
+"highlights": [
+"Built a modern and responsive portfolio website.",
+"Implemented animations using Framer Motion.",
+"Optimized for performance and accessibility.",
+"Deployed on Vercel."
+],
+"github": "https://github.com/pradeepkumarsingha/Professional_Portfolio",
+"live": "https://pradeepkumarsingha.netlify.app/"
+}
+]

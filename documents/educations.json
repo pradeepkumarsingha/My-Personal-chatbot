@@ -1,0 +1,27 @@
+[
+  {
+    "degree": "Bachelor of Technology (B.Tech)",
+    "branch": "Computer Science / Engineering", 
+    "institution"    : "GIFT Autonomous (Gandhi Institute for Technology)",
+    "location": "Bhubaneswar, Odisha",
+    "timeline": "4th Year (Continuing)",
+    "metricType": "CGPA",
+    "metricValue": "8.9"
+  },
+  {
+    "degree": "Higher Secondary Education (Class 12th - Science)",
+    "institution": "Rural Institute of Higher Studies (RIHS)",
+    "location": "Bhograi, Odisha",
+    "timeline": "Completed in 2023",
+    "metricType": "Percentage",
+    "metricValue": "77.6%"
+  },
+  {
+    "degree": "Secondary Education (Class 10th)",
+    "institution": "Prasad Chandra Govt. High School",
+    "location": "Kachuadi, Odisha",
+    "timeline": "Completed in 2021",
+    "metricType": "Percentage",
+    "metricValue": "86.5%"
+  }
+]

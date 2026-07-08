@@ -1,0 +1,109 @@
+{
+"web_development": [
+{
+"name": "React",
+"proficiency": "Advanced",
+"level": 85,
+"description": "Building responsive and interactive single-page applications using React, React Hooks, and component-based architecture."
+},
+{
+"name": "JavaScript",
+"proficiency": "Advanced",
+"level": 80,
+"description": "Developing dynamic web applications using modern JavaScript concepts including ES6+, asynchronous programming, and DOM manipulation."
+},
+{
+"name": "Tailwind CSS",
+"proficiency": "Advanced",
+"level": 85,
+"description": "Designing modern, responsive, and mobile-friendly user interfaces using utility-first CSS."
+},
+{
+"name": "Node.js",
+"proficiency": "Intermediate",
+"level": 75,
+"description": "Building scalable backend services and REST APIs using Node.js."
+},
+{
+"name": "Express.js",
+"proficiency": "Intermediate",
+"level": 70,
+"description": "Developing RESTful APIs and server-side applications using Express.js."
+},
+{
+"name": "MongoDB",
+"proficiency": "Intermediate",
+"level": 75,
+"description": "Designing and managing NoSQL databases and integrating them into full-stack applications."
+},
+{
+"name": "RESTful APIs",
+"proficiency": "Advanced",
+"level": 80,
+"description": "Designing and consuming REST APIs with proper authentication, validation, and error handling."
+},
+{
+"name": "MySQL",
+"proficiency": "Intermediate",
+"level": 70,
+"description": "Writing SQL queries, designing relational databases, and performing data analysis."
+}
+],
+
+"artificial_intelligence": [
+{
+"name": "Python",
+"proficiency": "Advanced",
+"level": 80,
+"description": "Using Python for machine learning, data analysis, automation, and backend development."
+},
+{
+"name": "Scikit-Learn",
+"proficiency": "Intermediate",
+"level": 75,
+"description": "Building and evaluating machine learning models including classification, regression, and clustering algorithms."
+},
+{
+"name": "TensorFlow",
+"proficiency": "Intermediate",
+"level": 70,
+"description": "Developing deep learning models and neural networks using TensorFlow and Keras."
+},
+{
+"name": "Pandas",
+"proficiency": "Advanced",
+"level": 80,
+"description": "Performing data cleaning, manipulation, preprocessing, and exploratory data analysis."
+},
+{
+"name": "NumPy",
+"proficiency": "Intermediate",
+"level": 78,
+"description": "Working with numerical computing, matrix operations, and scientific computing."
+},
+{
+"name": "Keras",
+"proficiency": "Intermediate",
+"level": 70,
+"description": "Building and training deep learning models using high-level neural network APIs."
+},
+{
+"name": "Computer Vision",
+"proficiency": "Intermediate",
+"level": 75,
+"description": "Developing image processing and image classification systems using OpenCV and deep learning."
+},
+{
+"name": "Natural Language Processing",
+"proficiency": "Advanced",
+"level": 80,
+"description": "Building NLP applications using language models, text processing, and Generative AI technologies."
+},
+{
+"name": "Generative AI",
+"proficiency": "Advanced",
+"level": 80,
+"description": "Working with Large Language Models, prompt engineering, AI agents, and Retrieval-Augmented Generation systems."
+}
+]
+}
