@@ -9,6 +9,9 @@ from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.runnables.history import RunnableWithMessageHistory
 from langchain_community.chat_message_histories import ChatMessageHistory
+from langchain_groq import GroqEmbeddings
+
+
 
 # Load API Keys
 load_dotenv()
@@ -17,8 +20,7 @@ CHROMA_DIR = "chroma_db"
 BM25_PKL_PATH = os.path.join(CHROMA_DIR, "bm25_corpus.pkl")
 
 # 1. Initialize the Free Embedding Model (Same as createDB.py)
-embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
-
+embeddings = GroqEmbeddings(model="text-embedding-ada-002")
 # 2. Setup Dense Retriever (ChromaDB)
 vectorstore = Chroma(persist_directory=CHROMA_DIR, embedding_function=embeddings)
 chroma_retriever = vectorstore.as_retriever(search_kwargs={"k": 3})
