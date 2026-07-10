@@ -8,8 +8,6 @@ from bot_backend import ask_personal_bot_stream
 
 app = FastAPI(title="Personal Portfolio RAG Bot API")
 
-# --- Configure CORS for your Portfolio Frontend ---
-# Replace with your Vercel URL when deploying to production
 origins = [
     "http://localhost:5173",  # Vite default local port
     "http://localhost:3000",
