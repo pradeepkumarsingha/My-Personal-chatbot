@@ -83,12 +83,14 @@ def get_session_history(session_id: str):
     return message_history_store[session_id]
 
 # 9. Execution Function
-def ask_personal_bot(user_query: str, session_id: str = "portfolio_user"):
-    # Retrieve contextual documents using Hybrid Search
+# 9. Asynchronous Streaming Execution Function
+# 9. Asynchronous Streaming Execution Function
+async def ask_personal_bot_stream(user_query: str, session_id: str = "portfolio_user"):
+    # 1. Retrieve documents using Hybrid Search (Keep synchronous if database lacks async native bindings)
     retrieved_documents = hybrid_retriever.invoke(user_query)
     context_str = format_docs(retrieved_documents)
     
-    # Formulate the chain pipeline
+    # 2. Re-formulate the core runnable pipeline
     brain_chain = prompt_template | llm
     
     conversational_chain = RunnableWithMessageHistory(
@@ -98,15 +100,18 @@ def ask_personal_bot(user_query: str, session_id: str = "portfolio_user"):
         history_messages_key="history"
     )
     
-    # Run chain and pass variable values
-    response = conversational_chain.invoke(
+    # 3. Stream chunks using LangChain's built-in async stream engine
+    async for chunk in conversational_chain.astream(
         {"input": user_query, "context": context_str},
         config={"configurable": {"session_id": session_id}}
-    )
-    
-    return response.content
+    ):
+        # ChatGroq returns AIMessageChunk objects; extract the raw text content
+        if hasattr(chunk, "content"):
+            yield chunk.content
+        elif isinstance(chunk, str):
+            yield chunk
 
-# --- TEST EXAMPLES ---
+
 if __name__ == "__main__":
     print("🤖 Bot Ready for Testing!")
     # Test keyword extraction (e.g. checking specific projects inside projects.json)

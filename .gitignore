@@ -1,53 +1,25 @@
-# =========================
-# Python
-# =========================
-__pycache__/
-*.py[cod]
-*$py.class
-
-# Virtual Environment
-venv/
-env/
-.venv/
-
-# Environment Variables
+# --- 1. SENSITIVE CREDENTIALS (CRITICAL) ---
 .env
 
-# IDE
+# --- 2. PYTHON VIRTUAL ENVIRONMENTS ---
+# If your 'rag' folder is your virtual environment, ignore it:
+rag/
+# Common virtual env names just in case:
+venv/
+.venv/
+env/
+
+# --- 3. PYTHON CACHE AND COMPILED FILES ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# --- 4. LOCAL IDE SETTINGS ---
 .vscode/
 .idea/
 
-# Jupyter
-.ipynb_checkpoints/
-
-# Logs
-*.log
-
-# OS Files
+# --- 5. SYSTEM FILES ---
 .DS_Store
 Thumbs.db
-
-# Python Packaging
-build/
-dist/
-*.egg-info/
-
-# Cache
-.cache/
-.pytest_cache/
-.mypy_cache/
-
-# SQLite
-*.sqlite
-*.sqlite3
-
-# Chroma DB
-chroma_db/
-
-# Temporary Files
-temp/
-tmp/
-uploads/
-
-# Model Cache
-.huggingface/
