@@ -9,7 +9,6 @@ venv/
 .venv/
 env/
 
-bm25_corpus.pkl
 # --- 3. PYTHON CACHE AND COMPILED FILES ---
 __pycache__/
 *.pyc
