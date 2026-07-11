@@ -8,15 +8,15 @@ from bot_backend import ask_personal_bot_stream
 
 app = FastAPI(title="Personal Portfolio RAG Bot API")
 
-origins = [
-    "http://localhost:5173",  # Vite default local port
-    "http://localhost:3000",
-    "https://pradeepkumarsingha.netlify.app/"
-]
+# origins = [
+#     "http://localhost:5173",  # Vite default local port
+#     "http://localhost:3000",
+#     "https://pradeepkumarsingha.netlify.app/"
+# ]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    # allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
