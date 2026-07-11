@@ -11,6 +11,7 @@ app = FastAPI(title="Personal Portfolio RAG Bot API")
 origins = [
     "http://localhost:5173",  # Vite default local port
     "http://localhost:3000",
+    "https://pradeepkumarsingha.netlify.app/"
 ]
 
 app.add_middleware(
