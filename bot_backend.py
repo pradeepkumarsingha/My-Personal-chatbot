@@ -1,5 +1,6 @@
 import os
 import pickle
+import asyncio
 from dotenv import load_dotenv
 from langchain_community.vectorstores import Chroma
 from langchain_community.retrievers import BM25Retriever
@@ -9,7 +10,7 @@ from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.runnables.history import RunnableWithMessageHistory
 from langchain_community.chat_message_histories import ChatMessageHistory
 from langchain_huggingface import HuggingFaceEndpointEmbeddings
-
+from langchain_core.documents import Document
 
 # Load API Keys
 load_dotenv()
@@ -17,14 +18,18 @@ load_dotenv()
 CHROMA_DIR = "chroma_db"
 BM25_PKL_PATH = os.path.join(CHROMA_DIR, "bm25_corpus.pkl")
 
-# 1. Initialize the Free Embedding Model (Same as createDB.py)
+# 1. Initialize the Free Embedding Model
 embeddings = HuggingFaceEndpointEmbeddings(
     model="sentence-transformers/all-mpnet-base-v2",
     huggingfacehub_api_token=os.getenv("HUGGING_FACE_TOKEN")
 )
-# 2. Setup Dense Retriever (ChromaDB)
+
+# 2. Setup Dense Retriever (ChromaDB) using Maximal Marginal Relevance (MMR)
 vectorstore = Chroma(persist_directory=CHROMA_DIR, embedding_function=embeddings)
-chroma_retriever = vectorstore.as_retriever(search_kwargs={"k": 3})
+chroma_retriever = vectorstore.as_retriever(
+    search_type="mmr",
+    search_kwargs={"k": 3, "fetch_k": 5}
+)
 
 # 3. Setup Sparse Retriever (BM25)
 if not os.path.exists(BM25_PKL_PATH):
@@ -34,7 +39,6 @@ with open(BM25_PKL_PATH, "rb") as f:
     bm25_corpus_data = pickle.load(f)
 
 # Reconstruct LangChain Document objects from serialized data
-from langchain_core.documents import Document
 bm25_docs = [
     Document(page_content=item["page_content"], metadata=item["metadata"]) 
     for item in bm25_corpus_data
@@ -43,14 +47,13 @@ bm25_retriever = BM25Retriever.from_documents(bm25_docs)
 bm25_retriever.k = 3
 
 # 4. Construct Hybrid Ensemble Retriever
-# Assigning weights: 60% semantic relevance, 40% exact keyword matching
+# Assigning weights: 60% MMR semantic relevance, 40% exact keyword matching
 hybrid_retriever = EnsembleRetriever(
     retrievers=[chroma_retriever, bm25_retriever],
     weights=[0.6, 0.4]
 )
 
 # 5. Initialize the LLM via Free Groq API
-# Using the blazing fast llama-3.1-8b-instant model (14,400 requests/day free tier)
 llm = ChatGroq(
     model="llama-3.1-8b-instant",
     temperature=0.4,
@@ -85,11 +88,9 @@ def get_session_history(session_id: str):
         message_history_store[session_id] = ChatMessageHistory()
     return message_history_store[session_id]
 
-# 9. Execution Function
-# 9. Asynchronous Streaming Execution Function
 # 9. Asynchronous Streaming Execution Function
 async def ask_personal_bot_stream(user_query: str, session_id: str = "portfolio_user"):
-    # 1. Retrieve documents using Hybrid Search (Keep synchronous if database lacks async native bindings)
+    # 1. Retrieve documents using Hybrid Search
     retrieved_documents = hybrid_retriever.invoke(user_query)
     context_str = format_docs(retrieved_documents)
     
@@ -115,12 +116,25 @@ async def ask_personal_bot_stream(user_query: str, session_id: str = "portfolio_
             yield chunk
 
 
-if __name__ == "__main__":
+# --- Local Testing Block ---
+async def main():
     print("🤖 Bot Ready for Testing!")
-    # Test keyword extraction (e.g. checking specific projects inside projects.json)
-    q1 = "Tell me about Krushi Sathi project and his skills."
-    print(f"\nUser: {q1}\nBot: {ask_personal_bot(q1)}")
+    test_session = "portfolio_test_run"
     
-    # Test follow-up context memory
+    # Test 1: Project & Skills Context
+    q1 = "Tell me about Krushi Sathi project and his skills."
+    print(f"\nUser: {q1}\nBot: ", end="", flush=True)
+    async for chunk in ask_personal_bot_stream(q1, session_id=test_session):
+        print(chunk, end="", flush=True)
+    print()  # Adds a clean line break after the stream finishes
+    
+    # Test 2: Test follow-up context memory
     q2 = "What are his contact details?"
-    print(f"\nUser: {q2}\nBot: {ask_personal_bot(q2)}")
+    print(f"\nUser: {q2}\nBot: ", end="", flush=True)
+    async for chunk in ask_personal_bot_stream(q2, session_id=test_session):
+        print(chunk, end="", flush=True)
+    print()
+
+if __name__ == "__main__":
+    # Run the async loop for testing
+    asyncio.run(main())
