@@ -9,7 +9,7 @@ from bot_backend import ask_personal_bot_stream
 app = FastAPI(title="Personal Portfolio RAG Bot API")
 
 origins = [
-    "http://localhost:5173",  # Vite default local port
+    "http://localhost:5174",  # Vite default local port
     "http://localhost:3000",
     "https://pradeepkumarsingha.netlify.app"
 ]
