@@ -55,7 +55,7 @@ hybrid_retriever = EnsembleRetriever(
 
 # 5. Initialize the LLM via Free Groq API
 llm = ChatGroq(
-    model="llama-3.1-8b-instant",
+    model="openai/gpt-oss-20b",
     temperature=0.4,
     max_tokens=500
 )

@@ -63,7 +63,7 @@ if not os.getenv("GROQ_API_KEY"):
     st.error("🔑 GROQ_API_KEY missing in your .env file! Please add it to talk to the bot.")
     st.stop()
 
-llm = ChatGroq(model="llama-3.1-8b-instant", temperature=0.3, max_tokens=500)
+llm = ChatGroq(model="openai/gpt-oss-20b", temperature=0.3, max_tokens=500)
 
 # 4. Prompt Engineering Setup
 system_prompt = (
